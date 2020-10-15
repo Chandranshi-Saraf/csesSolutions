@@ -14,16 +14,10 @@ public class Permutations{
     
     else
     {
-        long count=2;
-        while(count<=n){
-            System.out.print(count+" ");
-            count=count+2;
-        }
-        count=1;
-        while(count<=n){
-            System.out.print(count+" ");
-            count=count+2;
-        }
+        for(int i=2; i<=n; i+=2)
+            System.out.println(i+" ");
+        for(int i=1; i<=n; i+=2)
+            System.out.println(i+" ");
 
     }
     
