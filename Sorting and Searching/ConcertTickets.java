@@ -14,24 +14,23 @@ public class ConcertTickets{
     for(int i=0;i<m;i++)
     {
         long curr=sc.nextLong();
-        int pos=Collections.binarySearch(nList, curr);
-        if(pos>=0 && pos<nList.size() && nList.get(pos) == curr)
+        int pos=Collections.binarySearch(nList, curr); 
+        //System.out.println(nList+" "+curr+" "+pos);
+        if(pos>=0)
         {
             System.out.println(nList.get(pos));
             nList.remove(pos);
         }
         else
-            {   if(pos == -1)
-                    System.out.println(-1);
-                else
-                {
+            {   
                 pos=(-1*(pos+1))-1;
                 if(pos>=0)
                 {
                     System.out.println(nList.get(pos));
                     nList.remove(pos);
                 }
-                }
+                else
+                    System.out.println(-1);
             }
 
     }
